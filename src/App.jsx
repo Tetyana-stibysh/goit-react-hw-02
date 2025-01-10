@@ -26,6 +26,7 @@ function App() {
     });
   };
   const totalFeedback = values['good'] + values['neutral'] + values['bad'];
+  console.log(totalFeedback);
 
   useEffect(() => {
     window.localStorage.setItem('saved-key', JSON.stringify(values));
@@ -34,7 +35,9 @@ function App() {
   const resetReviews = () => {
     setValues(reviews);
   };
-  const positiveFeedback = Math.round((values.good / totalFeedback) * 100);
+  const positiveFeedback =
+    totalFeedback > 0 ? Math.round((values.good / totalFeedback) * 100) : 0;
+
   return (
     <>
       <Description />
