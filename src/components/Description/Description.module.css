@@ -1,0 +1,13 @@
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px;
+}
+.title {
+  font-weight: 600;
+  font-size: 48px;
+}
+.text {
+  font-weight: 400;
+  font-size: 24px;
+}

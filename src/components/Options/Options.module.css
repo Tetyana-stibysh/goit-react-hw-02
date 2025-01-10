@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0;
+}
+.button {
+  font-weight: 400;
+  font-size: 24px;
+  padding: 3px 12px;
+}
