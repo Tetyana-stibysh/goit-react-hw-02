@@ -10,7 +10,7 @@ function App() {
     neutral: 0,
     bad: 0,
   };
-  const [values, setValues] = useState(reviews => {
+  const [values, setValues] = useState(() => {
     const savedReviews = window.localStorage.getItem('saved-key');
     const parsSaved = JSON.parse(savedReviews);
     if (parsSaved !== null) {
@@ -25,8 +25,7 @@ function App() {
       [feedbackType]: values[feedbackType] + 1,
     });
   };
-  const totalFeedback = values['good'] + values['neutral'] + values['bad'];
-  console.log(totalFeedback);
+  const totalFeedback = values.good + values.neutral + values.bad;
 
   useEffect(() => {
     window.localStorage.setItem('saved-key', JSON.stringify(values));
