@@ -25,10 +25,13 @@ function App() {
       [feedbackType]: values[feedbackType] + 1,
     });
   };
+  const totalFeedback = values.good + values.neutral + values.bad;
+  console.log(values.good);
+
   useEffect(() => {
     window.localStorage.setItem('saved-key', JSON.stringify(values));
   }, [values]);
-  const totalFeedback = values.good + values.neutral + values.bad;
+
   const resetReviews = () => {
     setValues(reviews);
   };
