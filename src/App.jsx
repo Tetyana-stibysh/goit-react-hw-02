@@ -30,11 +30,7 @@ function App() {
   }, [values]);
   const totalFeedback = values.good + values.neutral + values.bad;
   const resetReviews = () => {
-    setValues({
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    });
+    setValues(reviews);
   };
   const positiveFeedback = Math.round((values.good / totalFeedback) * 100);
   return (
